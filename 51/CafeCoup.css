@@ -2,6 +2,10 @@ html {
     background-color: peru;
     margin-top: 10px;
 }
+body{
+    max-width: 1500px;
+    margin: auto;
+}
 
 header {
     text-align: center;
@@ -12,14 +16,14 @@ header {
 
 
 
-.header-title {
+#header-title {
     font-weight: bold;
     color: chocolate;
     cursor: pointer;
     text-decoration: none;
     font-size: 48px;
 }
-.header-title:hover{
+#header-title:hover{
 font-size: 1.7em;
 }
 
