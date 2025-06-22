@@ -1,0 +1,27 @@
+header{
+    text-align: center;
+
+}
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    a:-webkit-any-link {
+    color:chocolate;
+    cursor: pointer;
+    text-decoration:none;
+}
+}
+h2{
+    font-size: 2em;
+    color:brown;
+}
+h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: brown;
+     a:-webkit-any-link {
+    color:brown;
+    cursor: pointer;
+    text-decoration:none;
+}
+}

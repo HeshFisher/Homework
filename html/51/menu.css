@@ -1,0 +1,16 @@
+body{
+    max-width: 1500px;
+    margin: auto;
+}
+p {
+    border: 2px solid chocolate;
+    border-radius: 10px;
+    margin-right: 922px;
+    text-align: center;
+    font-size: 18px;
+    color: antiquewhite;
+}
+img{
+    border-radius: 10px;
+}
+
