@@ -1,0 +1,75 @@
+html {
+    background-image: url(images/Cafe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+color: #F8EAD1;
+    margin-top: 10px;
+}
+body{
+    
+    max-width: 2700px;
+    margin: auto;
+}
+
+
+header {
+    text-align: center;
+    background-color:  #6dd6d4;
+    margin: -54px -8px 38px -8px;
+    padding-bottom: 5px;
+    box-shadow: -1px 1px 7px 0px black;
+}
+header img{
+    margin-top: 57px;
+    border-radius: 7px;
+    scale: 1.1 1.1;
+    opacity: .8;
+}
+
+
+
+#header-title {
+    font-weight: bold;
+    color: chocolate;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 48px;
+    display:block;
+}
+#header-title:hover{
+font-size: 1.55em;
+}
+
+
+h2 {
+    font-size: 2em;
+    color: brown;
+}
+
+header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+}
+
+.ankers {
+    color: brown;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.text-header {
+    font-weight: bold;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+.ankers:hover {
+    color: chocolate;
+    font-size: 1.05em;
+}

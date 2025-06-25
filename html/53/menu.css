@@ -1,0 +1,33 @@
+body{
+    background: #BE9F86;
+background: linear-gradient(153deg,rgba(190, 159, 134, 1) 0%, rgba(217, 145, 82, 1) 64%, rgba(64, 43, 38, 1) 100%);
+    max-width: 2700px;
+    margin: none;
+}
+article{
+    letter-spacing: 2px ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    
+    text-shadow: -.5px -.5px .5px rgb(222, 102, 17) ;
+}
+.menu-item{
+    border: 2px solid rgb(181, 87, 20);
+    border-radius: 10px;
+    box-shadow: -2px 2px 10px black;
+    text-align: center;
+    font-size: 18px;
+    color: antiquewhite;
+    text-decoration: none;
+    display: inline-block;
+    margin: 150px;
+}
+.menu-item:hover{
+    scale: .99 .99;
+  box-shadow: -1px 1px 7px black; 
+}
+.menu-item img{
+    border-radius: 10px;
+}
+
