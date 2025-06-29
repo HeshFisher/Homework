@@ -1,0 +1,100 @@
+html {
+    max-height: 5000px;
+    max-width: 2000px; 
+    margin: auto;
+    color: #F8EAD1;
+    background-color: #BE9F86;
+    margin-top: 10px;
+}
+
+body {
+    max-height: 5000px;
+    max-width: 2000px;
+    margin: auto;
+    background: #BE9F86;
+    background: linear-gradient(153deg, rgba(190, 159, 134, 1) 0%, rgba(217, 145, 82, 1) 64%, rgba(64, 43, 38, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+
+header {
+    background-image: url(images/headerImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    position: relative;
+    text-align: center;
+    background-color: #6dd6d4;
+    margin: -54px 0px 38px 0px;
+    padding-bottom: 5px;
+    box-shadow: -1px 1px 7px 0px black;
+}
+
+header h1 {
+    padding-top: 50px;
+}
+
+header img {
+    margin-top: 57px;
+    border-radius: 7px;
+    scale: 1.1 1.1;
+    opacity: .8;
+}
+
+
+
+#header-title {
+    font-weight: bold;
+    color: chocolate;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 48px;
+    display: block;
+}
+
+#header-title:hover {
+    font-size: 1.55em;
+}
+
+
+h2 {
+    font-size: 2em;
+    color: brown;
+}
+
+header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+}
+
+.ankers {
+    color: brown;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.text-header {
+    color: brown;
+    font-weight: bold;
+    font-size: large;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+    margin: 20px;
+}
+
+.ankers:hover {
+    color: chocolate;
+    font-size: 1.05em;
+}
+.index-video{
+    width: 1000px;
+    height: 1000px;
+    margin: -60px 10px 0px 30px;
+}

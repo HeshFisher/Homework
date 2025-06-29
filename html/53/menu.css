@@ -1,10 +1,7 @@
 body {
-    min-height: 1500px;
     max-height: 5000px;
-    background: #BE9F86;
-    background: linear-gradient(153deg, rgba(190, 159, 134, 1) 0%, rgba(217, 145, 82, 1) 64%, rgba(64, 43, 38, 1) 100%);
-    max-width: 2700px;
-    margin: none;
+    max-width: 2000px;
+    margin: auto;
 
 }
 
