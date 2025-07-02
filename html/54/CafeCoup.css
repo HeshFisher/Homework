@@ -20,7 +20,7 @@ body {
 header {
     background-image: url(images/headerImg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center center;
     min-height: 300px;
     position: relative;
@@ -41,8 +41,6 @@ header img {
     scale: 1.1 1.1;
     opacity: .8;
 }
-
-
 
 #header-title {
     font-weight: bold;
@@ -104,7 +102,41 @@ p {
 }
 h4{
     font-style: italic;
+    text-align: center; 
+}
+#reserveClick{
+    border: solid brown 2px;
+    border-radius: 50px;
+    background-color: chocolate;
+    width: 100px;
+    height: 35px;
     text-align: center;
-
-    
+    font-size: 1.5em;
+    line-height: 35px;
+    box-shadow: 4px 6px 10px #35322f;
+    position: fixed;
+    top: 675px;
+    left: 1350px;
+}
+#reserveClick a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+#reserveClick:hover {
+    scale: .99 .99;
+    box-shadow: 2px 3px 7px #35322f;
+}
+#stop{
+    border: solid brown 2px;
+    border-radius: 50px;
+    background-color: chocolate;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 35px;
+    box-shadow: 4px 6px 10px #35322f;
+    position: relative;
+    top: 560px;
+    left: 700px;
 }
