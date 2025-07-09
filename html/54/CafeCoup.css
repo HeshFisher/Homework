@@ -127,16 +127,7 @@ h4{
     box-shadow: 2px 3px 7px #35322f;
 }
 #stop{
-    border: solid brown 2px;
-    border-radius: 50px;
-    background-color: chocolate;
-    width: 100px;
-    height: 35px;
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 35px;
-    box-shadow: 4px 6px 10px #35322f;
     position: relative;
-    top: 560px;
-    left: 700px;
+    top: -3px;
+    left: 550px;
 }
