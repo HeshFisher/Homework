@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        gap: 1em;
+
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: (2, 50px);
+        
+
+      }
+
+      section{
+        display: grid;
+                grid-template-areas:
+          'two    .   four'
+          'six    one  seven'
+          'five     .    three' ;
+    
+          border: 1px solid black;
+          padding: 2;
+      }
+      .one {
+        grid-area: one;
+      }
+      .two {
+        grid-area: two;
+      }
+      .three{
+        grid-area: three;
+      }
+      .four{
+        grid-area: four;
+      }
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="one">1</div>
+    </section>
+    <section>
+      <div class="two">2</div>
+      <div class="three">2</div>
+    </section>
+    <section>
+      <div class="one">3</div>
+      <div class="two">3</div>
+      <div class="three">3</div>
+    </section>
+    <section>
+      <div class="two">4</div>
+      <div class="three">4</div>
+      <div class="four">4</div>
+      <div class="five">4</div>
+    </section>
+    <section>
+      <div class="one">5</div>
+      <div class="two">5</div>
+      <div class="three">5</div>
+      <div class="four">5</div>
+      <div class="five">5</div>
+    </section>
+    <section>
+      <div class="two">6</div>
+      <div class="three">6</div>
+      <div class="four">6</div>
+      <div class="five">6</div>
+      <div class="six">6</div>
+      <div class="seven">6</div>
+    </section>
+  </body>
+</html>
