@@ -1,0 +1,182 @@
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  scroll-padding-top: 4rem;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  z-index: 10;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+}
+a {
+  float: left;
+  margin: 13px 20px 13px 7px;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+header {
+  width: 80%;
+  margin: auto;
+  margin-top: 48px;
+  background-color: rgb(182, 182, 182);
+  padding-top: 2px;
+  text-align: center;
+  height: 125px;
+  border-radius: 0px 0px 7px 7px;
+}
+header h1 {
+  text-transform: uppercase;
+}
+main {
+  width: 80%;
+  margin: auto;
+}
+.products {
+  text-align: justify;
+}
+.products h3 {
+  text-align: center;
+  padding-top: 5px;
+}
+.products img,
+.products video {
+  width: 100%;
+  object-fit: contain;
+  z-index: 5;
+}
+.products .Computer,
+.products .Choirs {
+
+  padding-right: 0.5em;
+} 
+
+.sign-me-up {
+  background-color: rgb(182, 182, 182);
+  text-align: center;
+  padding: 10px;
+  margin-top: 65px;
+  border-radius: 7px;
+}
+.sign-me-up h3{
+  font-size: 1.5em;
+}
+input:not([type="submit"]) {
+  box-shadow: 1px 1px 7px 2px black;
+}
+input{
+  border-radius: 5px;
+  margin: 5px;
+}
+caption {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 15px;
+}
+.table-container{
+  overflow: auto;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 2px solid black;
+}
+th {
+  text-align: center;
+  padding: 4px 5px 4px 5px;
+}
+td {
+  text-align: right;
+}
+tbody tr:nth-child(odd) {
+  background-color: rgb(188, 206, 224);
+}
+tbody td:first-child {
+  text-align: center;
+}
+td:first-child{
+  font-weight: bold;
+}
+
+td:last-child {
+  color: red;
+  padding: 2px;
+}
+tbody tr:hover{
+  background-color: rgb(147, 147, 249);
+}
+
+footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  left: 0;
+}
+footer .container{
+  width: 80%;
+  margin: auto;
+}
+.copyright{
+  float: left;
+  margin: 5px 20px 5px 7px;
+  color: white;
+}
+
+
+article{
+padding-bottom: 30px;
+}
+ @media(800px <= width){
+  .products {
+  margin-top: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: justify;
+}
+.products h3 {
+  text-align: center;
+}
+.products img,
+.products video {
+  width: 100%;
+  object-fit: contain;
+  z-index: 5;
+}
+.products .Computer,
+.products .Choirs {
+  border-right: 1px solid black;
+  padding-right: 0.5em;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+input{
+  margin: 5px;
+}
+ }
+
+
