@@ -1,8 +1,9 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
   scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
 }
+
 
 nav {
   background-color: black;
@@ -33,7 +34,7 @@ a:hover {
 header {
   width: 80%;
   margin: auto;
-  margin-top: 48px;
+  margin-top: 40px;
   background-color: rgb(182, 182, 182);
   padding-top: 2px;
   text-align: center;
@@ -62,7 +63,6 @@ main {
 }
 .products .Computer,
 .products .Choirs {
-
   padding-right: 0.5em;
 } 
 
@@ -168,7 +168,7 @@ padding-bottom: 30px;
 .products .Computer,
 .products .Choirs {
   border-right: 1px solid black;
-  padding-right: 0.5em;
+  padding-right: 0.7em;
 }
 form{
   display: flex;
