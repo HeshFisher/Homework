@@ -18,8 +18,8 @@
   "homepage": "https://github.com/HeshFisher/Homework#readme",
   "description": "",
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "eslint": "^9.32.0",
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
     "globals": "^16.3.0"
   }
 }
