@@ -32,10 +32,11 @@ console.log(dayOfWeek.getIndex("shaB"));
 
 
 
-const intrestCal = (function () {
 
-    let year;
-    let rate;
+
+const intrestCal = (function () {
+  let year;
+  let rate;
 
   function setRate(r) {
     rate = r;
@@ -44,7 +45,12 @@ const intrestCal = (function () {
     year = y;
   }
   function calculateIntrest(principal) {
-    return principal * year * rate;
+    let total = principal;
+    for (let i = 0; i < year; i++) {
+      total += total * rate; 
+    }
+    //return principal * year * rate;
+    return total - principal;
   }
   return {
     setRate,
@@ -53,6 +59,6 @@ const intrestCal = (function () {
   };
 }());
 
-intrestCal.setRate(.5);
-intrestCal.setYears(5);
-console.log(intrestCal.calculateIntrest(5000));
+intrestCal.setRate(0.2);
+intrestCal.setYears(4);
+console.log(intrestCal.calculateIntrest(100));
