@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   Whats the message <input id="msg">
+   Modal? <input id="modal" type="checkbox">
+   Buttons to add <input id="buttons">
+    Callback? <input id="callback" type="checkbox">
+
+     <button id="show">show</button>
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis odio rerum maxime explicabo quos aperiam quae deleniti soluta. Sint perspiciatis distinctio aut itaque at repellat temporibus debitis ea assumenda?
+    <script src="hw.js"></script>
+    <script>
+      show.addEventListener('click', () => {
+
+          cb = undefined;
+          if (callback.checked) {
+            cb = e => pcsMessageBox(`student said the homework was ${e}`);
+          }
+
+      pcsMessageBox(msg.value, modal.checked,buttons.value.split(','),cb);
+      });
+                //  pcsMessageBox('was the homework hard', true,['very hard', 'medium hard','not hard'],e => pcsMessageBox(`student said the homework was ${e}`));
+    </script>
+  </body>
+</html>
