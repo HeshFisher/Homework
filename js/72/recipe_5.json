@@ -1,0 +1,20 @@
+{
+  "id": 5,
+  "name": "Pancakes",
+  "image": "Pancakes.jpg",
+  "ingredients": [
+    "1 cup flour",
+    "1 tbsp sugar",
+    "1 cup milk",
+    "1 egg",
+    "2 tbsp melted butter",
+    "1 tsp baking powder",
+    "Pinch of salt"
+  ],
+  "instructions": [
+    "Mix all dry ingredients in a bowl.",
+    "Add milk, egg, and melted butter, and whisk until smooth.",
+    "Pour batter onto a hot griddle and cook until bubbles form.",
+    "Flip and cook the other side until golden brown."
+  ]
+}

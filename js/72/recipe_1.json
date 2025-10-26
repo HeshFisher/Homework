@@ -1,0 +1,20 @@
+{
+  "id": 1,
+  "name": "Spaghetti Bolognese",
+  "image": "Spaghetti.jpg",
+  "ingredients": [
+    "200g spaghetti",
+    "100g minced beef",
+    "1 onion, chopped",
+    "2 garlic cloves, minced",
+    "400g tomato sauce",
+    "Salt and pepper to taste"
+  ],
+  "instructions": [
+    "Cook spaghetti according to package instructions.",
+    "In a pan, saut\u00e9 onion and garlic until soft.",
+    "Add minced beef and cook until browned.",
+    "Stir in tomato sauce and simmer for 15 minutes.",
+    "Serve sauce over spaghetti."
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Spaghetti Bolognese",
+    "image": "https://images.unsplash.com/photo-1603133872878-684f5f6b3c2f"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Caesar Salad",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+  },
+  {
+    "id": 3,
+    "name": "Vegetable Stir Fry",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 4,
+    "name": "Beef Tacos",
+    "image": "https://images.unsplash.com/photo-1601924582971-d431b2b9eeb8"
+  },
+  {
+    "id": 5,
+    "name": "Pancakes",
+    "image": "https://images.unsplash.com/photo-1587731502847-5bff8aef5c4f"
+  }
+]

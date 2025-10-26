@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "name": "Chicken Caesar Salad",
+  "image": "Caesar_Salad.jpg",
+  "ingredients": [
+    "1 grilled chicken breast, sliced",
+    "2 cups romaine lettuce",
+    "2 tbsp Caesar dressing",
+    "Croutons",
+    "Parmesan cheese"
+  ],
+  "instructions": [
+    "Toss lettuce with Caesar dressing.",
+    "Add chicken, croutons, and Parmesan.",
+    "Mix well and serve immediately."
+  ]
+}
