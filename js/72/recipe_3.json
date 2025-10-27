@@ -1,0 +1,19 @@
+{
+  "id": 3,
+  "name": "Vegetable Stir Fry",
+  "image": "Vegetable_Stir_Fry.jpg",
+  "ingredients": [
+    "1 cup broccoli florets",
+    "1 carrot, sliced",
+    "1 bell pepper, sliced",
+    "2 tbsp soy sauce",
+    "1 tbsp sesame oil",
+    "1 garlic clove, minced"
+  ],
+  "instructions": [
+    "Heat sesame oil in a wok.",
+    "Add garlic and stir-fry for 30 seconds.",
+    "Add vegetables and cook until tender-crisp.",
+    "Add soy sauce, stir, and serve hot."
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    
+        #loading {
+            display: none;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    
+        #content {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 10px;
+            min-height: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    Page Name: <input type="text" id="pageName" placeholder="load page here"/>
+    <button id="load">Load Page</button>
+    <div id="loading">⏳ Loading...</div>
+    <div id="content"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="messageBox.js"></script>
+    <script>
+      (function () {
+        const pageName = $('#pageName');
+        const load = $('#load');
+        const loading = $('#loading')
+        const content = $('#content');
+        
+        load.on('click', async () => {
+            loading.show();
+            setTimeout(async() => {
+            try {
+            const response = await fetch(pageName.val());
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }   
+            const text = await response.text();
+            content.text(text)  
+          } catch (e) {
+           pcsMessageBox({ msg: `Error fetching the page: ${e.message}` });
+            content.text(`Error fetching the page: ${e.message}`)
+          }
+            loading.hide();
+        },2000);
+        })
+          
+      }());
+    </script>
+  </body>
+</html>

@@ -1,60 +1,41 @@
 (function () {
   'use strict';
-
   let interval;
   const startButton = document.querySelector('#start');
-  const color = document.querySelector('#color tbody');
-  const colorTable = [];
-
-
-
-
-  let increment = 50;
+  const colorTable = document.querySelector('#color-table tbody');
 
   function start() {
-    let r = 0;
-    let g = 0;
-    let b = 0;
-
-
     interval = setInterval(() => {
+      const color = pickRandomColor();
+      const backgroundColor = pickRandomColor();
 
-      if ((r += increment) >= 256) {
-        r = 0;
+      document.body.style.color = color;
+      document.body.style.backgroundColor = backgroundColor;
 
-        if ((g += increment) >= 256) {
-          g = 0;
+      const row = colorTable.insertRow();
 
-          if ((b += increment) >= 256) {
-            b = 0;
-          }
-        }
-      }
+      row.innerHTML = ` <td>${new Date().toLocaleTimeString()}</td>
+                      <td>${color}</td>
+                      <td>${backgroundColor}</td>`;
 
-      document.body.style.color = `rgb(${r}, ${g}, ${b})`;
-      document.body.style.backgroundColor = `rgb(${b}, ${g}, ${r})`;
-
-      console.log(`${r}, ${g}, ${b}`);
-
-      const newColorRow = {
-        time: new Date(),
-        color: `R: ${r} G: ${g} B: ${b}`
-
-      };
-
-      colorTable.push(newColorRow);
-      const row = color.insertRow();
-      row.innerHTML = 
-      `<td>${newColorRow.time.toLocaleString()}</td>
-      <td>${newColorRow.color}</td>`;
-      console.log(colorTable);
+      row.style.color = color;
+      row.style.backgroundColor = backgroundColor;
+      row.addEventListener('click', () => {
+        stop();
+        document.body.style.color = color;
+        document.body.style.backgroundColor = backgroundColor;
+      });
 
       startButton.innerText = 'stop';
     }, 1000);
-
-
   }
 
+  function pickRandomColor() {
+    const randColor = Math.floor(Math.random() * 16777216);
+    const hex = randColor.toString(16);
+    const hexString = hex.padEnd(6, '0');
+    return `#${hexString}`;
+  }
 
   function stop() {
     clearInterval(interval);
@@ -62,8 +43,7 @@
     startButton.innerText = 'start';
   }
 
-
-  startButton.addEventListener('click', e => {
+  startButton.addEventListener('click', () => {
     if (!interval) {
       start();
     } else {
