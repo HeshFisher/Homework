@@ -20,7 +20,7 @@
       DropDown.append(`<option value=${recipe.id}>${recipe.name}</option>`);
     });
 
-    DropDown.change(async (e) => {
+    DropDown.change(async () => {
       try {
         const name = `recipe_${DropDown.val()}.json`;
         const recipe = await fetch(name);

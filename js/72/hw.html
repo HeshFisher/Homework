@@ -8,10 +8,10 @@
       body {
         text-align: center;
       }
-      #recipe-image {
+      /* #recipe-image {
         width: 300px;
         height: auto;
-      }
+      } */
       ul, ol{
         list-style: none;
         padding: 0;
@@ -19,14 +19,38 @@
     </style>
   </head>
   <body>
+    <body class="bg-light text-center p-4">
+  <div class="container">
+    <h1 class="mb-4">Heshy's Recipes</h1>
+    <h2 class="mb-3">Please choose from the following recipes:</h2>
+
+    <select id="recipe-dropdown" class="form-select mb-4 w-50 mx-auto">
+      <option hidden>Choose recipe</option>
+    </select>
+
+    <div id="recipe-container" class="card mx-auto" style="max-width: 600px;">
+      <img id="recipe-image" class="card-img-top" src="" alt="Recipe image">
+      <div class="card-body text-start">
+        <h2 id="recipe-name" class="card-title"></h2>
+
+        <h5>Ingredients</h5>
+        <ul id="ingredients-list" class="list-group list-group-flush mb-3"></ul>
+
+        <h5>Directions</h5>
+        <ol id="directions-list" class="list-group list-group-numbered"></ol>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container bg-light text-center p-4">
 <h1>Heshy's Recipes</h1>
 
-
+<div class="container bg-dark-subtle ">
 <h2>Please choose from the following recipes </h2>
 
 <select name="" id="recipe-dropdown">
 <option hidden>Choose recipe</option>
 </select>
+</div>
 
 <h2 id="recipe-name"></h2>
 <img src="" id="recipe-image">
@@ -38,7 +62,8 @@
 <h3>Directions</h3>
 <ol id="directions-list">
 
-</ol>
+</ol></div> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
