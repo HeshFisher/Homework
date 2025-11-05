@@ -1,101 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f7f2e7;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* Pieces tray at the top */
-      .images {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px 20px;
-        background-color: #ffe5b4;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        justify-content: center;
-      }
+    body {
+      background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      /* Use relative sizing for pieces */
-      .images img {
-        width: 10%; /* relative to the tray width */
-        max-width: 80px; /* prevent them from being too large */
-        height: auto;
-        cursor: grab;
-        user-select: none;
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
 
-      .images img:active {
-        cursor: grabbing;
-        transform: scale(1.2); /* slightly larger while dragging */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-      }
+    .images {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-bottom: 2px solid #ccc;
+      padding: 10px;
+      gap: 10px;
+      height: 120px;
+    }
 
-      /* Center game board area */
-      .board {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
+    .images::-webkit-scrollbar {
+      height: 8px;
+    }
+    .images::-webkit-scrollbar-thumb {
+      background: #aaa;
+      border-radius: 4px;
+    }
 
-      /* Potato silhouette */
-      .potato-silhouette {
-        width: 250px;
-        height: 350px;
-        background-color: #d9a066;
-        border-radius: 50% 50% 45% 45%;
-        position: relative;
-      }
+    .part {
+      cursor: grab;
+      user-select: none;
+      max-height: 100px;
+      transition: transform 0.1s ease;
+      z-index: 10;
+    }
 
-      /* Make dropped pieces scale with silhouette */
-      .board img {
-        position: absolute;
-        width: 20%; /* relative to potato silhouette */
-        max-width: 60px;
-        height: auto;
-        cursor: grab;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="images">
-      <img src="parts/eyes1.png" alt="" />
-      <img src="parts/eyes2.png" alt="" />
-      <img src="parts/eyes3.png" alt="" />
-      <img src="parts/eyes4.png" alt="" />
-      <img src="parts/eyes5.png" alt="" />
-      <img src="parts/glassesWithMustache.png" alt="" />
-      <img src="parts/leftEar.png" alt="" />
-      <img src="parts/mouth1.png" alt="" />
-      <img src="parts/mouth2.png" alt="" />
-      <img src="parts/mouth3.png" alt="" />
-      <img src="parts/nose1.png" alt="" />
-      <img src="parts/potato1.png" alt="" />
-      <img src="parts/nose2.png" alt="" />
-      <img src="parts/potato2.png" alt="" />
-      <img src="parts/rightEar.png" alt="" />
-    </div>
-    <script src="hw.js"></script>
-  </body>
+    .part:active {
+      cursor: grabbing;
+      transform: scale(1.1);
+    }
+
+    .build-area {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 20px;
+      background-color: #fafafa;
+      border: 3px dashed #ccc;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .placeholder {
+      color: #999;
+      font-size: 1.2em;
+      font-style: italic;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <audio src="game-gaming-minecraft-background-music-379533.mp3" autoplay></audio>
+  <div class="top-bar">
+  </div>
+    <div class="build-area"></div>
+  <script src="hw.js"></script>
+</body>
+
 </html>

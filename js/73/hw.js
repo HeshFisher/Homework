@@ -14,8 +14,12 @@
 
             lists.forEach(v => {
                 const name = document.createElement('li');
-                name.innerHTML= `<span>${v.name}</span><img src="${v.thumbnail ||'Media/video.png' }"alt="${v.name}"/>`;
+
                 
+                name.innerHTML += `
+  <img src="${v.thumbnail || 'video.png'}" alt="${v.name}" />
+  <span class="text-center mt-1">${v.name}</span>
+`;
                 videoList.appendChild(name);
 
                 name.addEventListener('click', ()=>{
