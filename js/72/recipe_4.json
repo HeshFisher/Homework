@@ -1,0 +1,19 @@
+{
+  "id": 4,
+  "name": "Beef Tacos",
+  "image": "Tacos.jpg",
+  "ingredients": [
+    "200g ground beef",
+    "1 taco seasoning packet",
+    "8 taco shells",
+    "Lettuce, chopped",
+    "Cheddar cheese, shredded",
+    "Tomatoes, diced"
+  ],
+  "instructions": [
+    "Cook beef in a skillet until browned.",
+    "Add taco seasoning and a bit of water, simmer for 5 minutes.",
+    "Fill taco shells with beef and toppings.",
+    "Serve immediately."
+  ]
+}
