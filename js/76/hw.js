@@ -30,6 +30,7 @@
                 image.style.zIndex = 10;
                 image.style.maxHeight = 'none'
                 buildArea.appendChild(image); 
+                dragging = image;
             } else {
                 topBar.appendChild(image);
             }
