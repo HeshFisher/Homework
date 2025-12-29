@@ -10,6 +10,7 @@ class App extends Component {
   state = {
     recipes: [],
     selectedRecipe: 1,
+     showRecipeForm: false
   };
 
   constructor() {
@@ -33,17 +34,6 @@ class App extends Component {
     } catch (e) {
       console.error(e);
     }
-
-    /*this.interval = setInterval(() => {
-
-      this.setState({
-        selectedRecipe: this.state.selectedRecipe ? 0 : 1
-      })
-    }, 5000);*/
-  }
-
-  componentWillUnmount() {
-    // clearInterval(this.interval);
   }
 
   selectRecipe = (e) => {
@@ -51,11 +41,24 @@ class App extends Component {
       selectedRecipe: e.target.value,
     });
   };
+  addRecipeButton = (e) => {
+    e.preventDefault();
+    this.setState({
+      showRecipeForm: !this.state.showRecipeForm,
+    });
+  };
+
+  addNewRecipe = (recipe) => {
+    recipe.id = Math.max(...this.state.recipes.map(r => r.id)) + 1;
+    this.state.recipes.push(recipe)
+    this.setState({
+      recipes: this.state.recipes,
+      showRecipeForm: false
+    })
+  }
 
   render() {
     const { recipes, selectedRecipe } = this.state;
-
-    /*const recipesJsx = recipes?.map(r => <option key={r.id} value={r.id}>{r.name}</option>);*/
 
     const recipe = !recipes.length ? (
       <NoRecipe />
@@ -66,20 +69,15 @@ class App extends Component {
     return (
       <>
         <Header />
-        {/*<select id="recipes" value={selectedRecipe} onChange={this.selectRecipe}>
-          <option hidden>select a recipe</option>
-          {recipesJsx}
-        </select>*/}
 
         <RecipeList
           recipes={recipes}
           selectedRecipe={selectedRecipe}
           selectRecipe={this.selectRecipe}
         />
-
+        <button onClick={this.addRecipeButton}>Add</button>
+        {this.state.showRecipeForm ? <AddRecipe addNewRecipe={this.addNewRecipe} /> : null}
         {recipe}
-
-        <AddRecipe />
       </>
     );
   }
