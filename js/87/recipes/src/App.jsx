@@ -1,16 +1,16 @@
-import { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Recipe from './Recipe';
-import NoRecipe from './NoRecipe';
-import RecipeList from './RecipeList';
-import AddRecipe from './AddRecipe';
+import { Component } from "react";
+import "./App.css";
+import Header from "./Header";
+import Recipe from "./Recipe";
+import NoRecipe from "./NoRecipe";
+import RecipeList from "./RecipeList";
+import AddRecipe from "./AddRecipe";
 
 class App extends Component {
   state = {
     recipes: [],
-    selectedRecipe: 1
-  }
+    selectedRecipe: 1,
+  };
 
   constructor() {
     super();
@@ -20,7 +20,7 @@ class App extends Component {
 
   async componentDidMount() {
     try {
-      const response = await fetch('recipes.json');
+      const response = await fetch("recipes.json");
       if (!response.ok) {
         throw new Error(`${response.status} - ${response.statusText}`);
       }
@@ -28,9 +28,8 @@ class App extends Component {
       console.log(recipes);
 
       this.setState({
-        recipes
+        recipes,
       });
-
     } catch (e) {
       console.error(e);
     }
@@ -47,22 +46,22 @@ class App extends Component {
     // clearInterval(this.interval);
   }
 
-  selectRecipe = e => {
+  selectRecipe = (e) => {
     this.setState({
-      selectedRecipe: e.target.value
+      selectedRecipe: e.target.value,
     });
-  }
+  };
 
   render() {
     const { recipes, selectedRecipe } = this.state;
 
     /*const recipesJsx = recipes?.map(r => <option key={r.id} value={r.id}>{r.name}</option>);*/
 
-
-
-    const recipe = !recipes.length
-      ? <NoRecipe />
-      : <Recipe recipe={recipes[selectedRecipe]} />
+    const recipe = !recipes.length ? (
+      <NoRecipe />
+    ) : (
+      <Recipe recipe={recipes[selectedRecipe]} />
+    );
 
     return (
       <>
@@ -72,14 +71,18 @@ class App extends Component {
           {recipesJsx}
         </select>*/}
 
-        <RecipeList recipes={recipes} selectedRecipe={selectedRecipe} selectRecipe={this.selectRecipe} />
+        <RecipeList
+          recipes={recipes}
+          selectedRecipe={selectedRecipe}
+          selectRecipe={this.selectRecipe}
+        />
 
         {recipe}
 
-        <AddRecipe/>
+        <AddRecipe />
       </>
     );
   }
 }
 
-export default App
+export default App;
