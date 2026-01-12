@@ -1,0 +1,49 @@
+header {
+  background-color: lightgray;
+  text-align: center;
+  height: 100px;
+  margin: 1em;
+}
+header h1 {
+  line-height: 100px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5em;
+}
+.user-item,
+.blog-item {
+  border: 1px solid #e1e1e1;
+  background-color: aliceblue;
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.user-item:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-item:hover {
+  cursor: default;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.blog-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  gap: 5em;
+}
+#back-button:hover ,.comment-button:hover {
+  cursor: pointer;
+}
