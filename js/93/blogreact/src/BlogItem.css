@@ -1,0 +1,33 @@
+.blog-item {
+  border: 1px solid #e1e1e1;
+  background-color: aliceblue;
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin: .5em;
+}
+
+.blog-item:hover {
+  cursor: default;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-button {
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  color: blue;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin-top: 10px; /* Added a tiny bit of space for looks */
+}
+
+.comment-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
