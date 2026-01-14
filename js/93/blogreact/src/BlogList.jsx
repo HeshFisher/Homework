@@ -20,6 +20,7 @@ export default function BlogList(props) {
         setError(null);
       } catch (e) {
         setError(e.message);
+        return;
       }
     }
 
@@ -28,6 +29,13 @@ export default function BlogList(props) {
 
   if (error) {
     return <ErrorMessage message={error} />;
+  }
+
+  if(posts.length === 0) {
+    return <div className="blog-list">
+      <BlogHeader user={user} backClick={onBackClick} />
+      <h3>No blogs found for this user.</h3>
+    </div>
   }
 
   return (

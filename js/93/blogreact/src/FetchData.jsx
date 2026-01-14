@@ -15,14 +15,9 @@ export async function loadUsers() {
 }
 
 export async function loadBlogs(userId) {
-
-  const data = await fetchData(
-    `https://jsonplaceholder.typicode.com/posts?userId=${userId}x`
+  return await fetchData(
+    `https://jsonplaceholder.typicode.com/posts?userId=${userId}`
   );
-  if (data.length === 0) {
-    throw new Error(`User ID ${userId} not found (No posts)`);
-  }
-  return data;
 }
 
 export async function loadComments(postId) {

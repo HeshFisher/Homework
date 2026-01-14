@@ -30,7 +30,7 @@ export default function UserList(props) {
 
   return (
     <div className="user-list">
-      <h2>Users Log</h2>
+      <h2>Profiles</h2>
       {users.map((u) => (
         <UserItem key={u.id} user={u} onUserClick={handleUserClick} />
       ))}
