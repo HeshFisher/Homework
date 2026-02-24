@@ -1,0 +1,10 @@
+    <form >
+      <label>Please enter your name:</label>
+      <input type="text" name="name">
+      <button type="submit">Save</button>
+    </form>
+
+    <p>Current Name: {{name}}</p>
+    <h3>You have visited this page {{visits}} times!!</h3>
+
+    <a href="/"><button>Back To Home</button></a>
