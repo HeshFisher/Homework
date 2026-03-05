@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a> | <a href="/admin">Admin</a>
+
+      {{#name}}
+      <h2>Welcome {{ name }}</h2>
+      <a href="/changeName">change name</a>
+      {{/name}}
+
+      {{#username}}
+      <h5>
+        Your username is {{ username }}!
+        <a href="/logout"><button>Logout</button></a>
+      </h5>
+      {{/username}}
+    </header>
+
+    {{> content}}
+  </body>
+</html>

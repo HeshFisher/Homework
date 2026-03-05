@@ -1,0 +1,9 @@
+<h4>Current Name: {{name}}</h4>
+
+<form action="/changeName" method="POST">
+    <label >New Name:
+        <input name="name">
+    </label>
+   <button>Save</button>
+</form>
+
