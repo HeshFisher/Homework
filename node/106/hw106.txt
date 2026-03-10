@@ -1,0 +1,142 @@
+Microsoft Windows [Version 10.0.26100.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\heshy>mongosh
+Current Mongosh Log ID: 69b0823b2b64cd2aa97c2906
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+Using MongoDB:          8.2.5
+Using Mongosh:          2.7.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-03-10T15:31:32.986-04:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+MongoDB shell ready 🚀
+1 test>use foo
+switched to db foo
+2 foo>db.products.insertOne({name: "Laptop", category: "Electronics", price: 1200})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b083322b64cd2aa97c2907')
+}
+3 foo>db.products.find()
+[
+  {
+    _id: ObjectId('69b083322b64cd2aa97c2907'),
+    name: 'Laptop',
+    category: 'Electronics',
+    price: 1200
+  }
+]
+4 foo>db.products.insertMany([{name: 'Smartphone', category: 'Electronics', price: 800},{name: 'Desk Chair',category: 'Furniture', price: 150}, {name: 'Notebook', category: 'Stationery', price: 5}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69b084942b64cd2aa97c2908'),
+    '1': ObjectId('69b084942b64cd2aa97c2909'),
+    '2': ObjectId('69b084942b64cd2aa97c290a')
+  }
+}
+5 foo>db.products.find()
+[
+  {
+    _id: ObjectId('69b083322b64cd2aa97c2907'),
+    name: 'Laptop',
+    category: 'Electronics',
+    price: 1200
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2908'),
+    name: 'Smartphone',
+    category: 'Electronics',
+    price: 800
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2909'),
+    name: 'Desk Chair',
+    category: 'Furniture',
+    price: 150
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c290a'),
+    name: 'Notebook',
+    category: 'Stationery',
+    price: 5
+  }
+]
+6 foo>db.products.find({category: 'Electronics'})
+[
+  {
+    _id: ObjectId('69b083322b64cd2aa97c2907'),
+    name: 'Laptop',
+    category: 'Electronics',
+    price: 1200
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2908'),
+    name: 'Smartphone',
+    category: 'Electronics',
+    price: 800
+  }
+]
+7 foo>db.products.find({category: 'Electronics'},{name: 1})
+[
+  { _id: ObjectId('69b083322b64cd2aa97c2907'), name: 'Laptop' },
+  { _id: ObjectId('69b084942b64cd2aa97c2908'), name: 'Smartphone' }
+]
+8 foo>db.products.find({category: 'Electronics'},{name: 1,price: 1}).sort(price: 1)
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:73)
+
+> 1 | db.products.find({category: 'Electronics'},{name: 1,price: 1}).sort(price: 1)
+    |                                                                          ^
+  2 |
+
+9 foo>db.products.find({category: 'Electronics'},{name: 1,price: 1}).sort({price: 1})
+[
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2908'),
+    name: 'Smartphone',
+    price: 800
+  },
+  {
+    _id: ObjectId('69b083322b64cd2aa97c2907'),
+    name: 'Laptop',
+    price: 1200
+  }
+]
+10 foo>db.products.find({},{name: 1,price: 1}).sort(price: 1)
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:50)
+
+> 1 | db.products.find({},{name: 1,price: 1}).sort(price: 1)
+    |                                                   ^
+  2 |
+
+11 foo>db.products.find({},{name: 1,price: 1}).sort({price: 1})
+[
+  {
+    _id: ObjectId('69b084942b64cd2aa97c290a'),
+    name: 'Notebook',
+    price: 5
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2909'),
+    name: 'Desk Chair',
+    price: 150
+  },
+  {
+    _id: ObjectId('69b084942b64cd2aa97c2908'),
+    name: 'Smartphone',
+    price: 800
+  },
+  {
+    _id: ObjectId('69b083322b64cd2aa97c2907'),
+    name: 'Laptop',
+    price: 1200
+  }
+]
+12 foo>
