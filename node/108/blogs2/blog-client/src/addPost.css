@@ -1,0 +1,9 @@
+#addPost input, #addPost textarea{
+display: block;
+width: 100%;
+margin: 10px 0;
+}
+
+#addPost textarea{
+    height: 200px;
+}
